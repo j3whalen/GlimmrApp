@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_micro">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+
+    <dimen name="gridview_item_size">150dp</dimen>
+    <dimen name="gridview_item_text_size">@dimen/text_size_micro</dimen>
+
+    <dimen name="dialog_message_padding">10dip</dimen>
+
+    <dimen name="loginPrimaryTextSize">60sp</dimen>
+    <dimen name="loginButtonTextSize">22sp</dimen>
+    <dimen name="loginButtonTopMargin">50sp</dimen>
+    <dimen name="loginButtonPadding">16sp</dimen>
+    <dimen name="secondaryTextTopMargin">60sp</dimen>
+    <dimen name="secondaryTextSize">22sp</dimen>
+
+    <!--As shown in the android design guide-->
+    <dimen name="menudrawerWidth">240dp</dimen>
+
+    <!-- (number of cells * 74) - 2
+        2x2 = 146x146
+        3x2 = 220x146
+        3x3 = 220x220
+        4x3 = 294x220
+        4x4 = 294x294
+     -->
+    <dimen name="appWidgetWidth">220dip</dimen>
+    <dimen name="appWidgetHeight">146dip</dimen>
+</resources>
+

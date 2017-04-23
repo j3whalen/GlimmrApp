@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- General preferences -->
+    <PreferenceCategory android:title="@string/pref_category_general">
+        <CheckBoxPreference
+            android:key="highQualityThumbnails"
+            android:title="@string/cb_high_quality_thumbnails_title"
+            android:enabled="false"
+            android:summary="@string/cb_high_quality_thumbnails_summary"
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="enableUsageTips"
+            android:title="@string/show_usage_tips"
+            android:enabled="true"
+            android:summary="@string/cb_show_usage_tips_summary"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="initialTab"
+            android:entries="@array/pageTitles"
+            android:entryValues="@array/pageTitles"
+            android:summary="@string/contacts"
+            android:title="@string/set_initial_tab" />
+    </PreferenceCategory>
+
+    <!-- Photoviewer preferences -->
+    <PreferenceCategory android:title="@string/pref_category_photoviewer">
+        <EditTextPreference
+            android:key="slideshowInterval"
+            android:inputType="number"
+            android:title="@string/slideshow_interval"
+            android:maxLength="3"
+            android:defaultValue="3" />
+    </PreferenceCategory>
+
+    <!-- Notification preferences -->
+    <PreferenceCategory android:title="@string/pref_category_notifications">
+        <CheckBoxPreference
+            android:key="enableNotifications"
+            android:title="@string/cb_enable_notifications_title"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="enableContactsNotifications"
+            android:title="@string/cb_enable_contacts_notifications_title"
+            android:dependency="enableNotifications"
+            android:defaultValue="false"
+            android:summary="@string/cb_enable_contacts_notifications_summary" />
+
+        <CheckBoxPreference
+            android:key="enableActivityNotifications"
+            android:title="@string/cb_enable_activity_notifications_title"
+            android:dependency="enableNotifications"
+            android:defaultValue="true"
+            android:summary="@string/cb_enable_activity_notifications_summary" />
+
+        <ListPreference
+            android:key="notificationIntervals"
+            android:entries="@array/pref_notification_intervals"
+            android:dependency="enableNotifications"
+            android:title="@string/pref_notification_intervals_title"
+            android:entryValues="@array/pref_notification_intervals_values"
+            android:defaultValue="60" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

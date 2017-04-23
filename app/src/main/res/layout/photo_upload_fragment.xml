@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="12dip">
+
+        <TextView
+                style="@style/GlimmrPageTitle"
+                android:id="@+id/textViewBasicSection"
+                android:text="@string/basic_info" />
+
+        <TextView
+                style="@style/GlimmrFormLabel"
+                android:id="@+id/textViewTitle"
+                android:text="@string/title" />
+        <EditText
+                android:id="@+id/editTextTitle"
+                android:hint="@string/add_title_hint"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:layout_marginBottom="16dp"
+                android:singleLine="true"
+                android:maxLength="256"/>
+
+        <TextView
+                style="@style/GlimmrFormLabel"
+                android:id="@+id/textViewDescription"
+                android:text="@string/description" />
+        <EditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/add_description_hint"
+                android:maxLength="256" />
+
+        <TextView
+                style="@style/GlimmrPageTitle"
+                android:id="@+id/textViewAdvancedSection"
+                android:text="@string/more" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:paddingTop="8dip" >
+            <TextView
+                    style="@style/GlimmrFormLabel"
+                    android:id="@+id/textViewPublic"
+                    android:text="@string/public_photos"
+                    android:paddingRight="8dip"/>
+            <Switch
+                    android:id="@+id/switchIsPublic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:checked="true"
+                    android:textOn="On"
+                    android:textOff="Off" />
+        </LinearLayout>
+
+        <TextView
+                style="@style/GlimmrFormLabel"
+                android:id="@+id/textViewTagsTitle"
+                android:text="@string/tags" />
+        <EditText
+                android:id="@+id/editTextTags"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:layout_marginBottom="16dp"
+                android:singleLine="true"
+                android:hint="@string/add_remove_tags_hint"
+                android:maxLength="256"/>
+    </LinearLayout>
+</ScrollView>

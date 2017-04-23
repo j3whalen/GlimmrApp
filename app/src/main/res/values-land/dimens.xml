@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_micro">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+
+    <dimen name="gridview_item_size">150dp</dimen>
+    <dimen name="gridview_item_text_size">@dimen/text_size_micro</dimen>
+
+    <dimen name="loginPrimaryTextSize">60sp</dimen>
+    <dimen name="loginButtonTextSize">22sp</dimen>
+    <dimen name="loginButtonTopMargin">50sp</dimen>
+    <dimen name="secondaryTextTopMargin">60sp</dimen>
+    <dimen name="secondaryTextSize">22sp</dimen>
+</resources>
+
