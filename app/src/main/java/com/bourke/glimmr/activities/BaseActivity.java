@@ -3,6 +3,8 @@ package com.bourke.glimmr.activities;
 import com.bourke.glimmr.BuildConfig;
 import android.app.ActionBar;
 import android.app.SearchManager;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -129,6 +131,21 @@ public abstract class BaseActivity extends FragmentActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getItemId() == R.id.copyurl){
+            ClipboardManager myUrlClipboard;
+            myUrlClipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+
+            ClipData searchUrl;
+            /*
+            get the term and append it to the base
+            String searchTerms = "url that the app retrieved"
+             */
+            //searchUrl = ClipData.newPlainText("text", searchTerms);
+            myUrlClipboard.setPrimaryClip(searchUrl);
+
+        }
+
         switch (item.getItemId()) {
             case android.R.id.home:
                 /* This is called when the Home (Up) button is pressed
