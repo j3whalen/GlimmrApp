@@ -12,6 +12,8 @@
                 android:title="@string/most_recent" />
             <item android:id="@+id/interestingness"
                 android:title="@string/interestingness" />
+            <item android:id="@+id/copyurl"
+                android:title="Copy URL" />
         </menu>
     </item>
 </menu>
