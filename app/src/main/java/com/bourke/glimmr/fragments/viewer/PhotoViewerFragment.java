@@ -445,7 +445,18 @@ public final class PhotoViewerFragment extends BaseFragment
         new DownloadPhotoTask(mActivity, new Events.IPhotoDownloadedListener() {
             @Override
             public void onPhotoDownloaded(Bitmap bitmap, Exception e) {
-                String filename = mBasePhoto.getTitle() + ".jpg";
+                //For some reason, the getTitle() function will return an empty string for some photos, preventing
+                //it from being properly saved. Set to default to Untitled.jpg so it can save, and be renamed later
+                //if the user wants to
+                String filename = mBasePhoto.getTitle();
+                if(filename == "")
+                    filename = "Untitled.jpg";
+                else
+                    filename += ".jpg";
+                /* -- Onscreen notification through Toast to check that it got a filename --
+                Toast.makeText(mActivity, "Filename-:  " + filename, Toast.LENGTH_SHORT)
+                        .show();
+                        */
                 if (e == null && createExternalStoragePublicPicture(bitmap, filename) != null) {
                     Toast.makeText(mActivity, getString(R.string.image_saved), Toast.LENGTH_SHORT)
                             .show();
@@ -467,8 +478,8 @@ public final class PhotoViewerFragment extends BaseFragment
         if (size != null) {
             return photo.getLargeUrl();
         } else {
-            /* No large size available, fall back to medium */
             return photo.getMediumUrl();
+
         }
     }
 
@@ -517,6 +528,12 @@ public final class PhotoViewerFragment extends BaseFragment
     private File createExternalStoragePublicPicture(Bitmap bitmap, String filename) {
         File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
         File file = new File(path, filename);
+        /* -- Use Toast to make onscreen notifications, great for debugging while using the app --
+        Testing to verify a proper file path is used
+        String thisfile = file.toString();
+        String thispath = path.toString();
+        Toast.makeText(mActivity, "File|Path: " + thisfile + "|" + thispath, Toast.LENGTH_SHORT)
+                .show();*/
         try {
             path.mkdirs();
 
