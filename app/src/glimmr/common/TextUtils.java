@@ -21,15 +21,15 @@ public class TextUtils {
     public static final int FONT_ROBOTOBOLD = 4;
 
     private static final String FONT_PATH_SHADOWSINTOLIGHT =
-        "fonts/ShadowsIntoLight.ttf";
+            "fonts/ShadowsIntoLight.ttf";
     private static final String FONT_PATH_ROBOTOREGULAR =
-        "fonts/Roboto-Regular.ttf";
+            "fonts/Roboto-Regular.ttf";
     private static final String FONT_PATH_ROBOTOTHIN =
-        "fonts/Roboto-Thin.ttf";
+            "fonts/Roboto-Thin.ttf";
     private static final String FONT_PATH_ROBOTOLIGHT =
-        "fonts/Roboto-Light.ttf";
+            "fonts/Roboto-Light.ttf";
     private static final String FONT_PATH_ROBOTOBOLD =
-        "fonts/Roboto-Bold.ttf";
+            "fonts/Roboto-Bold.ttf";
 
     private final Typeface mFontShadowsIntoLight;
     private final Typeface mFontRobotoRegular;
