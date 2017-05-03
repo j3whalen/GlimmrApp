@@ -10,7 +10,8 @@
                 android:title="@string/relevance" />
             <item android:id="@+id/most_recent"
                 android:title="@string/most_recent" />
-            <item android:id="@+id/interestingness"
+            <item
+                android:id="@+id/interestingness"
                 android:title="@string/interestingness" />
             <item android:id="@+id/copyurl"
                 android:title="Copy URL" />

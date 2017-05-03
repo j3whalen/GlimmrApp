@@ -1,5 +1,7 @@
 package com.bourke.glimmr.fragments.search;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -92,6 +94,21 @@ public abstract class AbstractPhotoSearchGridFragment extends PhotoGridFragment
                 mSortType = SORT_TYPE_INTERESTING;
                 refresh();
                 break;
+
+            case R.id.copyurl:
+                /*
+                copyURL();
+                break;
+
+                GlimmrClipboardManager myClipboard = new GlimmrClipboardManager(mActivity);
+                ClipData searchUrl;
+
+                //get the term and append it to the base
+                String searchTerms = "url that the app retrieved";
+
+                searchUrl = ClipData.newPlainText("text", searchTerms);
+                myUrlClipboard.setPrimaryClip(searchUrl);
+                */
         }
         return super.onOptionsItemSelected(item);
     }
