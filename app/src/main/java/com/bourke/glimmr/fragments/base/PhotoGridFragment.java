@@ -265,6 +265,9 @@ public abstract class PhotoGridFragment extends BaseFragment
                 Log.d(getLogTag(), "mNewPhotos null or empty, using most " +
                     "recent fetched photo as newest");
             storeNewestPhotoId(photos.get(0));
+            if(mPage==25){
+                mMorePages = false;
+            }
         }
     }
 
