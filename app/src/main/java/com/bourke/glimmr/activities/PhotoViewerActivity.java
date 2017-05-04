@@ -433,7 +433,7 @@ public class PhotoViewerActivity extends BaseActivity
         }
 
         @Override
-        public void onPageSelected(int position) {
+        public void onPageSelected(int position) { //MIGHT BE HERE
             /*
              * If comments fragment is showing update it for the current photo
              */

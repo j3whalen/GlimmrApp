@@ -102,6 +102,14 @@ public class ExploreActivity extends com.bourke.glimmr.activities.BaseActivity
             public Fragment getItemImpl(int position) {
                 switch (position) {
                     case INTERESTING_PAGE:
+
+//__________________________________________________________________________________________________
+                        //1.)
+                        //There should be a check here to compare incoming photos to previous block of photos
+                        Context context = getApplicationContext();
+                        Toast.makeText(context, "Retrieving More Photos",Toast.LENGTH_SHORT).show();
+//--------------------------------------------------------------------------------------------------
+
                         return RecentPublicPhotosFragment.newInstance();
                 }
                 return null;

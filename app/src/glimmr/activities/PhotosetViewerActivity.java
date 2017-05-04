@@ -8,6 +8,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
+import android.content.Context;
+import android.widget.Toast;
+
 
 import com.bourke.glimmr.R;
 import com.bourke.glimmr.activities.*;
@@ -109,6 +112,12 @@ public class PhotosetViewerActivity extends com.bourke.glimmr.activities.BottomO
             public Fragment getItemImpl(int position) {
                 switch (position) {
                     case PHOTOSET_PAGE:
+//__________________________________________________________________________________________________
+                        //1.)
+                        //There should be a check here to compare incoming photos to previous block of photos
+                        Context context = getApplicationContext();
+                        Toast.makeText(context, "Retrieving More Photos",Toast.LENGTH_SHORT).show();
+//--------------------------------------------------------------------------------------------------
                         return PhotosetGridFragment.newInstance(mPhotoset);
                 }
                 return null;
