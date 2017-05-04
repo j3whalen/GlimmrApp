@@ -13,6 +13,4 @@ public class GlimmrClipboardManager {
     public GlimmrClipboardManager(Context context){
         mClipboardManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
     }
-
-    public
 }
